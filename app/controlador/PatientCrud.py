@@ -2,7 +2,7 @@ from connection import connect_to_mongodb
 from bson import ObjectId
 from fhir.resources.patient import Patient
 import json
-collection = connect_to_mongodb("EntregaDeMedicamentos", "pacientes")
+collection = connect_to_mongodb("EntregaDeMedicamentos", "medicationRequest")
 def GetPatientById(patient_id: str):
     try:
         patient = collection.find_one({"_id": ObjectId(patient_id)})
