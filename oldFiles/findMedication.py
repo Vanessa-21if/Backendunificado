@@ -85,9 +85,9 @@ if patient:
     print("Paciente encontrado:")
     print(patient.get("name"))
 
-    med_request = find_medicationRequest(meds_collection, patient["_id"])
+    med_request = find_medication_request(meds_collection, patient["_id"])
 
-    if medicationRequest:
+    if medication_request:
         print(f"\nÓrdenes encontradas ({len(med_requests)}):")
         for med in med_request:
             print(f" - ID: {med['_id']}, Medicament: {med-get('medicationCodeableConcept', {}).get('text', 'Descnocido')}, Estado: {med.get('status')}")

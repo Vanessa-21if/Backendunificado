@@ -48,18 +48,18 @@ if __name__ == "__main__":
     uri = "mongodb+srv://21vanessaaa:VANEifmer2025@sampleinformationservic.ceivw.mongodb.net/?retryWrites=true&w=majority&appName=SampleInformationService"
 
     # Nombre de la base de datos y la colección
-    db_name = "EntregaDeMedicamentos"
-    collection_name = "medicationRequest"
+    db_name = "SamplePatientService"
+    collection_name = "patients"
 
     # Conectar a MongoDB
     collection = connect_to_mongodb(uri, db_name, collection_name)
     
     # Identifier específico a buscar (reemplaza con los valores que desees)
     identifier_type = "cc"
-    identifier_value = "1020713756"
+    identifier_value = "10131234568"
     
     # Buscar el paciente por identifier
-    paciente = find_patient_by_identifier(collection, identifier_type, identifier_value)
+    patient = find_patient_by_identifier(collection, identifier_type, identifier_value)
     
     # Mostrar los datos del paciente encontrado
-    display_patient(paciente)
+    display_patient(patient)
